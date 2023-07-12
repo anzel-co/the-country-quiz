@@ -1,0 +1,47 @@
+.result{
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 1em;
+    width: 80%;
+    margin: auto;
+    margin-top: 4rem;
+    overflow: auto;
+    animation: result 1s;
+}
+@keyframes result {
+    0%{
+        scale: 0%;
+    }
+    100%{
+        scale: 100%;
+    }
+}
+.reward{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+.result-buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.result-buttons img{
+    width: 25%;
+}
+.result-button:hover{
+    background-color: blue;
+    border-radius: 1rem;
+}
+@media screen and (min-width: 500px) {
+    .result{
+        width: 60%;
+        margin-top: 2rem;
+    }
+    .result-buttons img{
+        width: 3rem;
+    }
+}

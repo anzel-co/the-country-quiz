@@ -1,0 +1,43 @@
+.start{
+    text-align: center;
+    margin: auto;
+    margin-top: 1%;
+    width: 80%;
+    border: 2px solid black;
+    border-radius: 1rem;
+}
+.start-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    font-size: 1.25rem;
+}
+.start-items{
+    width: 75%;
+    margin: auto;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    column-gap: 5%;
+    overflow: auto
+}
+.start-item{
+    cursor: pointer;
+}
+.start-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+}
+.start-buttons img:hover{
+    scale: 105%;
+}
+@media screen and (min-width: 500px) {
+    .start{
+        width:50%;
+    }
+}

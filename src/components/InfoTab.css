@@ -1,0 +1,26 @@
+.infotab{
+    display: flex;
+    flex-direction: row;
+    height: 4.5rem;
+}
+.score-place{
+    width: 33%;
+    display: flex;
+    align-items: center;
+}
+.time-place{
+    width: 33%;
+}
+.skip-place{
+    width: 33%;
+    display: flex;
+    align-items: center;
+}
+@media screen and (min-width: 500px) {
+    .score-place{
+        justify-content: center;
+    }
+    .skip-place{
+        justify-content: right;
+    }
+}

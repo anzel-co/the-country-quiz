@@ -1,0 +1,74 @@
+.play{
+    text-align: center;
+    height: 100vh;
+}
+.play img{
+    width: 12%;
+    margin-top: 2%;
+}
+.play img:hover{
+    scale: 105%
+}
+.play_back{
+    float: left;
+}
+.play_shop{
+    float: right;
+}
+.mode{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.mode-flagsandcapitals{
+    margin: 0.5%;
+    width: 90%;
+    border: 2px solid black;
+    border-radius: 1rem;
+}
+.mode-flagsandcapitals:hover{
+    scale: 105%;
+}
+.mode-generalfacts{
+    margin: 0.5%;
+    width: 90%;
+    border: 2px solid black;
+    border-radius: 1rem;
+}
+.mode-generalfacts:hover{
+    scale: 105%;
+}
+.mode-thecountryquiz{
+    margin: 0.5%;
+    width: 90%;
+    border: 2px solid black;
+    border-radius: 1rem;
+}
+.mode-thecountryquiz:hover{
+    scale: 105%;
+}
+.play ul{
+    text-align: left;
+    list-style-position: inside;
+}
+a.hover{
+    scale: 105%;
+}
+@media screen and (min-width: 500px) {
+    .play img{
+        width: 3em;
+    }    
+}
+@media screen and (min-width: 650px) {
+    .mode-flagsandcapitals{
+        width: 20rem;
+    }
+    .mode-generalfacts{
+        width: 20rem;
+    }
+    .mode-thecountryquiz{
+        width: 20rem;
+    }
+}

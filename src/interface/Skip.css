@@ -1,0 +1,18 @@
+.skip-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.skip-wrapper i{
+    font-size: 1.25rem;
+    font-weight: 1000;
+}
+@media screen and (min-width: 500px) {
+    .skip-wrapper{
+        width: 10rem;
+    }
+}

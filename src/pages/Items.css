@@ -1,0 +1,53 @@
+.items-shop{
+    display: flex;
+    flex-direction: column;
+}
+.tokens-left{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black
+}
+.goback{
+    display: flex;
+    justify-content: left;
+}
+.tokens-top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.goplay{
+    display: flex;
+    justify-content: right;
+}
+.items-forsale{
+    height: 76.5vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    overflow: auto;
+}
+.item-forsale{
+    width: 11rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 1rem;
+}
+.cost{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 1rem;
+}
