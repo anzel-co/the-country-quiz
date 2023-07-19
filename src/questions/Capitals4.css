@@ -1,0 +1,132 @@
+.cap4_item{
+    height: 35rem;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+.cap4_question{
+    width: 92.5%;
+    height: 4rem;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 75);
+    border: 2px solid white;
+    border-radius: 1rem;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+.cap4_question p{
+    margin: 0%;
+    padding: 0%;
+}
+.cap4_capital{
+    width: 92.5%;
+    height: 4rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 75);
+    border: 2px solid white;
+    border-radius: 1rem;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+.cap4_capital p{
+    margin: 0%;
+    padding: 0%;
+}
+.cap4_choices{
+    width: 85%;
+    height: 24rem;
+    padding: 1rem;
+    border: 2px solid white;
+    border-radius: 1rem;
+}
+.cap4_answers{
+    width: 100%;
+    height: 24rem;
+    margin: 0%;
+    padding: 0%;
+    text-align: center;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: 1rem
+}
+.cap4_answer{
+    width: 100%;
+    height: 7.5rem;
+    border: 2px solid white;
+}
+.cap4_img{
+    width: 100%;
+    height: 7.5rem;
+    cursor: pointer;
+}
+.cap4_answer:hover{
+    scale: 105%;
+}
+@media screen and (min-width: 420px) {
+    .cap4_item{
+        height: 28rem;
+    }
+    .cap4_question{
+        width: 92%;
+        height: 3rem;
+    }
+    .cap4_capital{
+        width: 92%;
+        height: 3rem;
+    }
+    .cap4_choices{
+        width: 89%;
+        height: 18.75rem;
+    }
+    .cap4_answers{
+        height: 18.75rem;
+    }
+    .cap4_answer{
+        width: 70%;
+        height: 9rem;
+    }
+    .cap4_img{
+        width: 100%;
+        height: 9rem;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .cap4_answer{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 380px) {
+    .cap4_item{
+        height: 28rem;
+    }
+    .cap4_question{
+        height: 3rem;
+    }
+    .cap4_capital{
+        height: 4rem;
+    }
+    .cap4_choices{
+        width: 82%;
+        height: 17.75rem;
+    }
+    .cap4_answers{
+        height: 17.75rem;
+    }
+    .cap4_answer{
+        height: 7rem;
+    }
+    .cap4_img{
+        height: 7rem;
+    }
+}

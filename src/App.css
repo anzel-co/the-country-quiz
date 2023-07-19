@@ -1,9 +1,9 @@
-.thecountryquiz{
+.app{
     top: 0%;
     left: 0%;
     position: fixed;
     width: 100%;
     height: 100vh;
     z-index: -1;
-    /*background: url('thecountryquiz-bg.gif') fixed center top / cover;*/
+    background: url('thecountryquiz-bg.gif') fixed center top / cover;
 }

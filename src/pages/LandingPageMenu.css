@@ -1,0 +1,34 @@
+.nav-bar-landing-page{
+    display: block;
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    height: 5rem;
+}
+.nav-pages{
+    list-style: none;
+    margin: 0%;
+    padding: 0%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 5rem;
+    height: 5rem;
+}
+.nav-links{
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    line-height: 5;
+    border-radius: 1rem;
+}
+.nav-links:hover{
+    background-color: white;
+}
+a{
+    text-decoration: none;
+}
+.active{
+    background-color: white; 
+}

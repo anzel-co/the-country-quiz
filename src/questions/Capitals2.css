@@ -1,0 +1,118 @@
+.cap2_item{
+    height: 35rem;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+.cap2_question{
+    width: 92.5%;
+    height: 4rem;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 75);
+    border: 2px solid white;
+    border-radius: 1rem;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+.cap2_question p{
+    margin: 0%;
+    padding: 0%;
+}
+.cap2_country{
+    width: 92.5%;
+    height: 7rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 75);
+    border: 2px solid white;
+    border-radius: 1rem;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+.cap2_country p{
+    margin: 0%;
+    padding: 0%;
+}
+.cap2_choices{
+    width: 95%;;
+    background-color: rgba(0, 0, 0, 75);
+    height: 16rem;
+}
+.cap2_answers{
+    height: 16rem;
+    margin: 0%;
+    padding: 0%;
+    text-align: center;
+    list-style: none;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0.25rem;
+}
+.cap2_answer{
+    font-size: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 75);
+    border: 2px solid white;
+    border-radius: 1rem;
+    cursor: pointer;
+    overflow: hidden;
+}
+.cap2_answer:hover{
+    scale: 102.5%;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+@media screen and (min-width: 420px) {
+    .cap2_item{
+        height: 28rem;
+        gap: 2rem;
+    }
+    .cap2_question{
+        width: 92%;
+        height: 3.10rem;
+    }
+    .cap2_country{
+        width: 92%;
+        height: 11.7rem;
+    }
+    .cap2_choices{
+        height: 9.3rem;
+        width: 92.5%;
+    }
+    .cap2_answers{
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0.5rem
+    }
+}
+@media screen and (max-width: 380px) {
+    .cap2_item{
+        height: 28rem;
+        gap: 2rem;
+    }
+    .cap2_question{
+        height: 3.25rem;
+    }
+    .cap2_country{
+        height: 9rem;
+    }
+    .cap2_choices{
+        height: 12rem;
+    }
+    .cap2_answers{
+        height: 12rem;
+    }
+}

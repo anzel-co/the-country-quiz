@@ -1,0 +1,11 @@
+.underconstruction{
+    width: 70vw;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    border: 2px dashed white;
+    border-radius: 1rem;
+    margin: auto;
+    margin-top: 10%;
+}

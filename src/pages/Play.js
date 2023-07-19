@@ -15,24 +15,28 @@ const Play = () => {
                 <img className="play_shop" src={shop} alt='shop'/>
             </NavLink>
             <div className="mode">
-                <div className="mode-flagsandcapitals">
-                    <h3>Flags and Capitals</h3>
-                    <ul>
-                        <li>Easy</li>
-                        <li>50 questions</li>
-                        <li>20 seconds timer</li>
-                        <li>3 lives</li>
-                    </ul>
-                </div>
-                <div className="mode-generalfacts">
-                    <h3>General Information</h3>
-                    <ul>
-                        <li>Medium</li>
-                        <li>100 questions</li>
-                        <li>30 seconds timer</li>
-                        <li>4 lives</li>
-                    </ul>
-                </div>
+                <NavLink className="mode-flagsandcapitals" to='/flagsandcapitals'>
+                    <div>
+                        <h3>Flags and Capitals</h3>
+                        <ul>
+                            <li>Easy</li>
+                            <li>50 questions</li>
+                            <li>20 seconds timer</li>
+                            <li>3 lives</li>
+                        </ul>
+                    </div>
+                </NavLink>
+                <NavLink className="mode-generalfacts" to='/generalinfo'>
+                    <div>
+                        <h3>General Information</h3>
+                        <ul>
+                            <li>Medium</li>
+                            <li>100 questions</li>
+                            <li>30 seconds timer</li>
+                            <li>4 lives</li>
+                        </ul>
+                    </div>
+                </NavLink>
                 <NavLink className="mode-thecountryquiz" to='/thecountryquiz'>
                     <div>
                         <h3>The Country Quiz</h3>

@@ -10,7 +10,7 @@ import './MainMenu.css'
 const MainMenu = () => {
     return (
         <>
-            <nav className="nav-bar">
+            <nav className="nav-bar-main">
                 <ul className="nav-pages">
                     <NavLink to='/' >
                         <li className="nav-links">

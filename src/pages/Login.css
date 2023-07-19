@@ -1,0 +1,50 @@
+.login{
+    width: 100%;
+    margin-top: 10%;
+    color: white;
+}
+.login-form{
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    border: 2px solid white;
+    border-radius: 1rem;
+    margin: auto;
+    padding: 1rem;
+}
+.form-label{
+    width: 15rem;
+    font-size: 1.25rem;
+}
+.form-input{
+    font-weight: bold;
+    height: 1.25rem;
+}
+.form-button{
+    width: 8rem;
+    height: 2rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+
+}.form-button:hover{
+    background-color: white;
+    color: black;
+}
+.email-input-field{
+    display: flex;
+    flex-direction: column;
+}
+.password-input-field{
+    display: flex;
+    flex-direction: column;
+}
+.invalid-message{
+    text-align: center;
+}

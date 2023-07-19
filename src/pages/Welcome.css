@@ -1,0 +1,33 @@
+.welcome{
+    color: white;
+}
+.thecountryquiz-logo{
+    display: block;
+    width: 85%;
+    margin: auto;
+    animation: scale 0.5s ease-out;
+}
+.welcome-message{
+    width: 80%;
+    font-size: 1.25rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    border: 2px solid white;
+    border-radius: 2rem;
+    scale: 0%;
+    margin: auto;
+    animation: scale 0.5s 0.5s ease-out forwards;
+}
+@keyframes scale {
+    0%{
+        scale: 0%;
+    }   
+    100%{
+        scale: 100%;
+    }
+}
+@media screen and (min-width: 500px) {
+    .thecountryquiz-logo{
+        width: 20rem;
+    }
+}

@@ -1,0 +1,6 @@
+.flagsandcapitals{
+    height: 100vh;
+    display: grid;
+    grid-auto-rows: auto;
+    gap: 0%;
+}

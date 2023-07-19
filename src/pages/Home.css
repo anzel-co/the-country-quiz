@@ -14,6 +14,7 @@
     width: 5rem;
     animation: scale 0.5s 0.5s forwards;
     scale: 0%;
+    cursor: pointer;
 }
 .home-buttons img:hover{
     transform: scale(110%);
@@ -30,4 +31,26 @@
     .thecountryquiz-logo{
         width: 20rem;
     }
+}
+.info-message{
+    margin: auto 5%;
+    text-align: center;
+    font-size: 1.1rem;
+    background-color: rgba(0, 0, 0, 0.95);
+    color: white;
+    border: 2px solid white;
+    border-radius: 1rem;
+}
+.info-button{
+    width: 5rem;
+    margin: auto;
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+.info-button:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
 }

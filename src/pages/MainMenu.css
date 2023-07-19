@@ -1,6 +1,6 @@
-.nav-bar{
+.nav-bar-main{
     display: block;
-    background-color: darksalmon;
+    background-color: rgba(0, 0, 0, 0.75);
     width: 100%;
     height: 5rem;
 }
@@ -9,7 +9,7 @@
     margin: 0%;
     padding: 0%;
     display: grid;
-    grid-template-columns: repeat(4, 25%);
+    grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 5rem;
     height: 5rem;
 }
@@ -23,18 +23,11 @@
     line-height: 5;
 }
 .nav-links:hover{
-    background-color: azure;
-    border-radius: 1rem;
-}
-.nav-links:active{
-    background-color: azure;
-    border-radius: 1rem;
+    background-color: white;
 }
 a{
     text-decoration: none;
-    color: black;
 }
 .active{
-    background-color: azure;
-    border-radius: 1rem;
+    background-color: white;
 }

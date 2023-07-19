@@ -1,0 +1,16 @@
+.score-count{
+    position: absolute;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    animation: score 2s ease-in-out forwards;
+}
+@keyframes score {
+    0%{
+        opacity: 1;
+        translate: 0px 0px;
+    }
+    100%{
+        opacity: 0;
+        translate: 0px -50px;
+    }
+}

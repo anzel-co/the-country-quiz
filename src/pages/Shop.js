@@ -1,6 +1,5 @@
 import React from "react";
 import { Outlet, NavLink } from "react-router-dom";
-import back from '../img/back.png'
 import items from '../img/items.png'
 import flag from '../img/flag.png'
 import premium from '../img/premium.png'
@@ -17,7 +16,7 @@ const Shop = () => {
                             <img src={items} alt='items' />
                         </li>
                     </NavLink>
-                    <NavLink to='/shop/flag' >
+                    <NavLink to='/shop/flags' >
                         <li className="shop-nav-links">
                             <img src={flag} alt='flag' />
                         </li>

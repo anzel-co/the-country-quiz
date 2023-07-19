@@ -1,8 +1,7 @@
-import React, { useRef } from "react";
+import React from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import './Timer.css'
 
-export let timeStop
 export let timeLeft
 const renderTime = ({ remainingTime }) => {
     if (remainingTime === 0) {
@@ -19,11 +18,11 @@ const Timer = ({score, setScore,
     multiplier, 
     wrong, setWrong, 
     lives, setLives, 
+    tokens, setTokens,
     questions, setQuestions, 
-    setFinished, seconds,
-    extraTime
+    extraTime, setFinished,
+    seconds, difficulty
     }) => {
-    timeStop = useRef(true)
     const randomSeconds = Math.floor(Math.random() * (30 - 10 + 1)) + 10
     const Countdown = () => {
         return (
@@ -32,15 +31,19 @@ const Timer = ({score, setScore,
             key={questions}
             size={60}
             strokeWidth={7}
-            isPlaying={timeStop.current}
+            isPlaying={true}
             duration={(seconds || randomSeconds) + extraTime}
             colors={["#004777", "#F7B801", "#A30000", "#A30000"]}
             colorsTime={[10, 7, 3, 0]}
             onComplete={() => [true,
                 500,
-                setScore(score - (((randomSeconds * 10) + 50) * multiplier)),
+                setScore(() => {
+                    if (difficulty === 'hard') return score - ((((randomSeconds + extraTime) * 10) + 50) * multiplier)
+                    else return Math.max(0, score - (Math.round((30 / timeLeft) * 10) * multiplier))
+                }),
                 setWrong(wrong + 1),
                 setLives(lives - 1),
+                setTokens(tokens - ((((difficulty === 'hard' ? (randomSeconds + extraTime) : (seconds + extraTime)) * 10) + 50) * multiplier)),
                 lives <= 1 && setFinished(true),
                 setQuestions(questions + 1),
             ]}>

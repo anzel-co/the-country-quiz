@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: row;
     height: 4.5rem;
+    background-color: rgba(0, 0, 0, 0.75);
 }
 .score-place{
     width: 33%;

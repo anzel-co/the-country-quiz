@@ -1,5 +1,9 @@
-import React, {useState} from "react";
+import React, {useEffect, useState, useContext} from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
+import { useHttpRequest } from "../utility/http-request";
+import Loading from "../utility/Loading";
+import ErrorMessage from "../utility/ErrorMessage";
 import confirm from '../img/confirm.png'
 import cancel from '../img/cancel.png'
 import skips from '../img/skip.png'
@@ -23,52 +27,120 @@ const Start = ({ setActive, skip,
     multiplier, setMultiplier,
     revealTime, setRevealTime
 }) => {
-    const [addLife, setAddLife] = useState(3)
-    const [addTime, setAddTime] = useState(3)
-    const [showTime, setShowTime] = useState(3)
-    const [ottDice, setOttDice] = useState(3)
-    const [ffsDice, setFfsDice] = useState(3)
+    const auth = useContext(AuthContext)
 
-    const onUseAddLife = () => {
+    const { loading, error, fetchRequest} = useHttpRequest()
+
+    const [addLife, setAddLife] = useState(0)
+    const [addTime, setAddTime] = useState(0)
+    const [showTime, setShowTime] = useState(0)
+    const [ottDice, setOttDice] = useState(0)
+    const [ffsDice, setFfsDice] = useState(0)
+    const [showError, setShowError] = useState(false)
+
+    useEffect(() => {
+        const getUserInventory = async () => {
+            try {
+                const data = await fetchRequest(`${process.env.REACT_APP_BACKEND_URL}/users/inventory/${auth.name}`, 
+                'GET',
+                { Authorization: 'Bearer ' + auth.token })
+    
+                setAddLife(data.user.addlife)
+                setAddTime(data.user.addtime)
+                setShowTime(data.user.showtime)
+                setOttDice(data.user.ottdice)
+                setFfsDice(data.user.ffsdice)
+            } catch (err) {
+                setShowError(true)
+            }
+        }
+        getUserInventory()
+    }, [auth.name, auth.token, fetchRequest, addLife, addTime, showTime, ottDice, ffsDice])
+
+    const onUseAddLife = async () => {
         if (addLife >= 1) {
-            setAddLife(addLife - 1)
-            setLives(lives + 1)
+            try {
+                await fetchRequest(`${process.env.REACT_APP_BACKEND_URL}/use/addlife/${auth.name}`,
+                'PATCH',
+                { Authorization: 'Bearer ' + auth.token })
+
+                setLives(lives + 1)
+                setAddLife(addLife - 1)
+            } catch (err) {
+                setShowError(true)
+            }
         }
     }
 
-    const onUseAddTime = () => {
+    const onUseAddTime = async () => {
         if (extraTime === 5) return
         if (addTime >= 1) {
-            setAddTime(addTime - 1)
-            setExtraTime(5)
+            try {
+                await fetchRequest(`${process.env.REACT_APP_BACKEND_URL}/use/addtime/${auth.name}`,
+                'PATCH',
+                { Authorization: 'Bearer ' + auth.token })
+
+                setExtraTime(extraTime + 5)
+                setAddTime(addTime - 1)
+            } catch (err) {
+                setShowError(true)
+            }
         }
     }
 
-    const onUseShowTime = () => {
+    const onUseShowTime = async () => {
         if (revealTime === true) return
-        if (revealTime === false) {
-            setShowTime(showTime - 1)
-            setRevealTime(true)
+        if (showTime >= 1) {
+            try {
+                await fetchRequest(`${process.env.REACT_APP_BACKEND_URL}/use/showtime/${auth.name}`,
+                'PATCH',
+                { Authorization: 'Bearer ' + auth.token })
+
+                setRevealTime(true)
+                setShowTime(showTime - 1)
+            } catch (err) {
+                setShowError(true)
+            }
         }
     }
 
-    const onUseOttDice = () => {
+    const onUseOttDice = async () => {
         if (ottDice >= 1) {
-            setOttDice(ottDice - 1)
-            setMultiplier(ott())
+            try {
+                await fetchRequest(`${process.env.REACT_APP_BACKEND_URL}/use/ottdice/${auth.name}`,
+                'PATCH',
+                { Authorization: 'Bearer ' + auth.token })
+
+                setMultiplier(ott())
+                setOttDice(ottDice - 1)
+            } catch (err) {
+                setShowError(true)
+            }
         }
     }
+    
 
-    const onUseFfsDice = () => {
-        if (ffsDice >= 1) {
-            setFfsDice(ffsDice - 1)
-            setMultiplier(ffs())
+    const onUseFfsDice = async () => {
+        if (ffsDice) {
+            try {
+                await fetchRequest(`${process.env.REACT_APP_BACKEND_URL}/use/ffsdice/${auth.name}`,
+                'PATCH',
+                { Authorization: 'Bearer ' + auth.token })
+                
+                setMultiplier(ffs())
+                setFfsDice(ffsDice - 1)
+            } catch (err) {
+                setShowError(true)
+            }
         }
     }
 
     const onClickHandler = () => setActive(true)
+
     return(
         <div className="start">
+            {loading && <Loading />}
+            {showError && <ErrorMessage error={error} setShowError={setShowError} />}
             <h2>Do you want to start the quiz?</h2>
             <hr />
             <div className="start-info">
@@ -99,8 +171,8 @@ const Start = ({ setActive, skip,
                     <img src={addtime} alt='addtime' />
                     <p>{addTime}</p>
                 </div>
-                <div className="start-item">
-                    <img src={showtime} alt='showtime' onClick={onUseShowTime}/>
+                <div className="start-item" onClick={onUseShowTime} >
+                    <img src={showtime} alt='showtime' />
                     <p>{showTime}</p>
                 </div>
                 <div className="start-item" onClick={onUseOttDice}>
@@ -115,9 +187,7 @@ const Start = ({ setActive, skip,
             <br/>
             <hr />
             <div className="start-buttons">
-            <NavLink > 
-                <img src={confirm} alt='confirm' onClick={onClickHandler}/>
-            </NavLink>
+            <img src={confirm} alt='confirm' onClick={onClickHandler}/>
             <NavLink to='/play'>
                 <img src={cancel} alt='cancel' />
             </NavLink>
