@@ -19,16 +19,18 @@
       const element = document.documentElement;
 
       const fullscreen = () => {
-        if (elem.requestFullscreen) {
-          elem.requestFullscreen();
-        } else if (elem.webkitRequestFullscreen) {
-          elem.webkitRequestFullscreen();
-        } else if (elem.msRequestFullscreen) { 
-          elem.msRequestFullscreen();
+        if (element.requestFullscreen) {
+          element.requestFullscreen();
+        } else if (element.webkitRequestFullscreen) {
+          element.webkitRequestFullscreen();
+        } else if (element.msRequestFullscreen) { 
+          element.msRequestFullscreen();
         }
       }
 
+      element.addEventListener('click', fullscreen)
       fullscreen()
+      
     </script>
   </body>
 </html>
