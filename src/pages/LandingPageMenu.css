@@ -26,9 +26,10 @@
 .nav-links:hover{
     background-color: white;
 }
-a{
+.nav-bar-landing-page a{
     text-decoration: none;
 }
-.active{
-    background-color: white; 
+.nav-bar-landing-page .active{
+    background-color: white;
+    border-radius: 1rem; 
 }

@@ -11,6 +11,8 @@ import Home from './pages/Home'
 import Play from './pages/Play';
 import Shop from './pages/Shop';
 import Items from './pages/Items';
+import Leaderboards from './pages/Leaderboards';
+import EasyHighscores from './pages/EasyHighscores';
 import Profile from './pages/Profile'
 import ErrorPage from './pages/ErrorPage'
 import UnderConstruction from './pages/UnderConstruction';
@@ -71,9 +73,14 @@ const App = () => {
         <Route path='/' element={<MainMenu />}>
           <Route index element={<Home />}/>
           <Route exact path='/play' element={<Play />}/>
-          <Route path='leaderboards' element={<UnderConstruction />}/>
-          <Route path='reviewer' element={<UnderConstruction />}/>
-          <Route path='profile' element={<Profile />}/>
+          <Route path='/leaderboards' element={<Leaderboards />}>
+            <Route path='/leaderboards/rankings' element={<UnderConstruction />}/>
+            <Route path='/leaderboards/easyhighscore' element={<EasyHighscores />}/>
+            <Route path='/leaderboards/mediumhighscore' element={<UnderConstruction />}/>
+            <Route path='/leaderboards/hardhighscore' element={<UnderConstruction />}/>
+          </Route>
+          <Route path='/reviewer' element={<UnderConstruction />}/>
+          <Route path='/profile' element={<Profile />}/>
         </Route>
         <Route path='/shop' element={<Shop />}>
           <Route path='/shop/items' element={<Items />} />
@@ -91,7 +98,12 @@ const App = () => {
       <Routes>
         <Route path='/' element={<LandingPageMenu />}>
           <Route index element={<Welcome />}/>
-          <Route path='leaderboards' element={<UnderConstruction />}/>
+          <Route path='/leaderboards' element={<Leaderboards />}>
+            <Route path='/leaderboards/rankings' element={<UnderConstruction />}/>
+            <Route path='/leaderboards/easyhighscore' element={<EasyHighscores />}/>
+            <Route path='/leaderboards/mediumhighscore' element={<UnderConstruction />}/>
+            <Route path='/leaderboards/hardhighscore' element={<UnderConstruction />}/>
+          </Route>
           <Route path='login' element={<Login />}/>
           <Route path='register' element={<Register />}/>
         </Route>

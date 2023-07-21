@@ -24,8 +24,9 @@
     align-items: center;
     justify-content: left;
     column-gap: 5%;
-    overflow: auto;
+    overflow-x: auto;
 }
+
 .start-item{
     cursor: pointer;
 }

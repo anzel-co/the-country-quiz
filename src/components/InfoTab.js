@@ -20,7 +20,7 @@ const InfoTab = ({score, setScore,
     return(
         <div className="infotab">
             <div className="score-place">
-                <ScoreCount score={score} difficulty={difficulty} questions={questions}/>
+                <ScoreCount score={score}/>
                 <Score score={score} multiplier={multiplier}/>
             </div>
             <div className="time-place" style={{visibility: revealTime === true ? 'visible' : 'hidden'}}>

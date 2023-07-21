@@ -1,3 +1,16 @@
+.home{
+    position: relative;
+}
+.home-updatelogs{
+    width: 10%;
+    position: absolute;
+    right: 0%;
+    margin: 1rem;
+    cursor: pointer;
+}
+.home-updatelogs:hover{
+    scale: 105%;
+}
 .thecountryquiz-logo{
     display: block;
     width: 85%;
@@ -27,19 +40,27 @@
         scale: 100%;
     }
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 400px) {
     .thecountryquiz-logo{
         width: 20rem;
     }
+    .home-updatelogs{
+        width: 64px;
+    }
 }
 .info-message{
-    margin: auto 5%;
+    width: 85%;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.01rem;
     background-color: rgba(0, 0, 0, 0.95);
     color: white;
     border: 2px solid white;
     border-radius: 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 5;
 }
 .info-button{
     width: 5rem;

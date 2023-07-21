@@ -22,7 +22,7 @@
 .pagenotfound{
     font-size: 2.5rem;
 }
-.goback{
+.redirectme{
     display: grid;
     place-items: center;
     justify-content: center;
@@ -33,7 +33,7 @@
     border-radius: 0.5rem;
     cursor: pointer;
 }
-.goback:hover{
+.redirectme:hover{
     background-color: white;
     color: black;
     border: 2px solid black;

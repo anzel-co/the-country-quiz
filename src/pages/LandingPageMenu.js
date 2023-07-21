@@ -17,7 +17,7 @@ const LandingPageMenu = () => {
                             <img src={welcome} alt='welcome' />
                         </li>
                     </NavLink>
-                    <NavLink to='/leaderboards' >
+                    <NavLink to='/leaderboards/rankings' >
                         <li className="nav-links">
                             <img src={leaderboards} alt='leaderboards' />
                         </li>

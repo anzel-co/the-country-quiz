@@ -1,0 +1,54 @@
+.leaderboards{
+    width: 100%;
+    height: 6rem;
+    background-color: rgba(0, 0, 0, 0.75);
+    margin: 0%;
+    padding: 0%;
+}
+.leaderboards-rankings{
+    width: 100%;
+    height: 3rem; 
+    display: grid;
+    font-size: 1.75rem;
+    text-align: center;
+    color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.leaderboards-highscores{
+    width: 100%;
+    height: 3rem;
+    text-align: center;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0%;
+    padding: 0rem;
+}
+.leaderboards-highscore{
+    width: 100%;
+    height: 3rem;
+    display: grid;
+    place-items: center;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.leaderboards a{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    color: white;
+    text-decoration: none;
+}
+.leaderboards a:hover{
+    background-color: white;
+    color:black;
+}
+.leaderboards .active{
+    background-color: white;
+    color: black;
+} 

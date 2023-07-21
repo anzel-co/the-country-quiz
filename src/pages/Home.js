@@ -1,18 +1,25 @@
-import React, {useRef} from "react";
+import React, {useRef, useState} from "react";
 import { NavLink } from "react-router-dom";
+import UpdateLogs from "../utility/UpdateLogs";
 
 import thecountryquiz from '../img/thecountryquiz.png'
 import play from '../img/play.png'
 import shop from '../img/shop.png'
 import info from '../img/info.png'
+import updatelogs from '../img/updatelogs.png'
 
 import './Home.css'
 
 const Home = () => {
     const modal = useRef()
 
+    const [showUpdateLogs, setShowUpdateLogs] = useState(false)
+
     return (
         <div className="home">
+            {showUpdateLogs && <UpdateLogs setShowUpdateLogs={setShowUpdateLogs} />}
+            <img className="home-updatelogs" src={updatelogs} alt='updatelogs' onClick={() => setShowUpdateLogs(true)
+            } />
             <img className="thecountryquiz-logo" src={thecountryquiz} alt='thecountryquiz'/>
             <div className="home-buttons">
                 <NavLink to='/play' >
@@ -21,7 +28,7 @@ const Home = () => {
                 <NavLink to='/shop/items' >
                     <img src={shop} alt='shop'/>
                 </NavLink>
-                <img src={info} alt='info' style={{width: '2.5rem'}} onClick={e => modal.current.showModal()}/>
+                <img src={info} alt='info' style={{width: '2.5rem'}} onClick={e => modal.current.show()}/>
             </div>
             <dialog className="info-message" ref={modal}>
                 THE COUNTRY QUIZ

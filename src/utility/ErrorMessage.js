@@ -2,16 +2,13 @@ import React, {useRef} from "react";
 
 import './ErrorMessage.css'
 
-export let errorMessage
-
 const ErrorMessage = ({ error, setShowError }) => {
-    errorMessage = useRef()
+    const errorMessage = useRef()
 
     const onConfirmHandler = () => {
         setShowError(false)
         errorMessage.current.close()
     }
-
 
     return (
     <dialog className="errorMessage" ref={errorMessage}>

@@ -13,7 +13,7 @@ const ErrorPage = () => {
                 <br />
                 <div><small><i>For suggestions and bug reports, you can write me an email at ansariusman@anzel.co</i></small></div>
                 <br />
-                <div className="goback" onClick={() => navigate('/')}>
+                <div className="redirectme" onClick={() => navigate('/')}>
                     REDIRECT ME
                 </div>
             </div>

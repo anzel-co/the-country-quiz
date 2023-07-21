@@ -4,15 +4,9 @@ import './ScoreCount.css'
 
 
 
-const ScoreCount = ({ score, difficulty, questions }) => {
-
-
+const ScoreCount = ({ score}) => {
     const [scoreDif, setScoreDif] = useState(0)
     const scoreCount = useRef(0)
-
-
-    //let update = questions === 0 ? score : scoreDif
-    
 
     useEffect(() => {
         setScoreDif(score - scoreCount.current + 0)

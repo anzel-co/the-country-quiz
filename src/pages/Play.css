@@ -68,7 +68,10 @@
     text-align: left;
     list-style-position: inside;
 }
-a.hover{
+.play a{
+    text-decoration: none;
+}
+.play a.hover{
     scale: 105%;
 }
 @media screen and (min-width: 500px) {

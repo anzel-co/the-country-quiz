@@ -26,10 +26,10 @@
     background-color: white;
     border-radius: 1rem;
 }
-a{
+.shop-nav-ba a{
     text-decoration: none;
 }
-.active{
+.shop-nav-ba .active{
     background-color: white;
     border-radius: 1rem;
 }

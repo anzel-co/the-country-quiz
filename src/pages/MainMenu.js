@@ -17,7 +17,7 @@ const MainMenu = () => {
                             <img src={home} alt='home' />
                         </li>
                     </NavLink>
-                    <NavLink to='/leaderboards' >
+                    <NavLink to='/leaderboards/rankings' >
                         <li className="nav-links">
                             <img src={leaderboards} alt='leaderboards' />
                         </li>

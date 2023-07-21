@@ -19,7 +19,7 @@ const UnderConstruction = () => {
             <small><i>- Ansari</i></small>
             <br />
 
-            <div className="goback" onClick={() => navigate('/')}>
+            <div className="redirectme" onClick={() => navigate('/')}>
                 REDIRECT ME
             </div>
         </div>
